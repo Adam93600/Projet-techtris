@@ -32,7 +32,7 @@ void afficherBienvenue() {
     printf("║   la rotation                                              ║\n");
     printf("║                                                            ║\n");
     printf("║ Contrôles :                                                ║\n");
-    printf("║ - Entrez le numéro de colonne (0-%d) pour placer la pièce  ║\n", LARGEUR_GRILLE - 1);
+    printf("║ - Entrez le numéro de colonne (0-%d) pour placer la pièce   ║\n", LARGEUR_GRILLE - 1);
     printf("║ - Entrez la rotation (0-3) pour tourner la pièce           ║\n");
     printf("║                                                            ║\n");
     printf("║ Bonne chance !                                             ║\n");
@@ -63,12 +63,12 @@ void afficherJeu(Jeu* jeu, Piece* prochainePiece) {
     printf("\033[1;34m║\033[1;33m TECH-TRIS            \033[1;34m║\033[0m\n");
     printf("\033[1;34m╠══════════════════════╣\033[0m\n");
     printf("\033[1;34m║\033[1;32m Score : %-12d \033[1;34m║\033[0m\n", jeu->score);
-    printf("\033[1;34m║\033[1;32m Niveau : %-12d \033[1;34m║\033[0m\n", jeu->niveau);
+    printf("\033[1;34m║\033[1;32m Niveau : %-11d \033[1;34m║\033[0m\n", jeu->niveau);
     printf("\033[1;34m╚══════════════════════╝\033[0m\n\n");
     
     // Afficher la prochaine pièce avec des améliorations esthétiques
     printf("\033[1;35mProchaine pièce :\033[0m\n");
-    printf("\033[1;35m╔═════════╗\033[0m\n");
+    printf("\033[1;35m╔═══════════╗\033[0m\n");
     for (int i = 0; i < TAILLE_PIECE; i++) {
         printf("\033[1;35m║ \033[0m");
         for (int j = 0; j < TAILLE_PIECE; j++) {
@@ -80,7 +80,7 @@ void afficherJeu(Jeu* jeu, Piece* prochainePiece) {
         }
         printf("\033[1;35m║\033[0m\n");
     }
-    printf("\033[1;35m╚═════════╝\033[0m\n\n");
+    printf("\033[1;35m╚═══════════╝\033[0m\n\n");
     
     // Afficher la grille du jeu avec des améliorations esthétiques
     printf("\033[1;36mGrille de jeu :\033[0m\n");
